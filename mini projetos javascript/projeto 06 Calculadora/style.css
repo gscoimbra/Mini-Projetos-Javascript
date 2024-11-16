@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    padding: 90px 0;
+}
+
+
+.calculator {
+    width: 400px;
+    margin: 0 auto; /*margens superior e inferior como 0 e margens laterais auto, permite que o navegador calcule automaticamente as margens esquerda e direita, quando aplicadas em um elemento com uma largura definida, no caso 400px. as margens laterais se ajustam igualmente centralizando o elemento na tela*/
+    background-color: #FBAB18;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px black;
+    /*0(primeiro valor): deslocamento horizontal da sombra. 0 signfifica que a sombra não será movida para esquerda e nem para a direita*/
+    /*0(segundor valor): deslocamento vertical da sombra. 0 significa que a sombra não será movida para cima e nem para baixo*/
+    /*15px:(terceiro valor): raio de esfoque(blur radius). quanto maior esse valor, mais suave e difusa a sombra se torna*/
+}
+
+.display {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: flex-end; /*move o conteúdo para a direita*/
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 15px;
+    font: normal 4rem serif; /*font normal define o estilo como normal(sem italico ou negrito)*/
+    overflow: hidden;/*Essa propriedade oculta qualquer conteúdo que ultrapasse os limites do .display. Se o conteúdo for maior que o espaço disponível ele será "cortado" e não aparecerá fora da área visível do elemento */
+    border-radius: 5px;
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /*Isso significa que .calculator-butttons terá 4 colunas, cada uma ocupando uma fração igual do espaço disponível, ou seja, nesse caso 25%*/
+    grid-gap: 10px;
+}
+
+.calculator button {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+button:hover {
+    background-color: #FBAB18;
+    color: black;
+}
